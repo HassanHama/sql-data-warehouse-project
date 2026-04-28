@@ -12,6 +12,11 @@ This project follows the **Medallion Architecture** (Bronze, Silver, Gold layers
 * **Silver (Cleaned):** Standardized, cleansed, and validated data.
 * **Gold (Curated):** Business-ready data modeled into Fact and Dimension tables for reporting.
 
+  ## 🏗️ High-Level Architecture
+![Data Warehouse Architecture](assets/arch_drawing.jpg)
+
+*Figure 1: Architectural design created in draw.io*
+
 ### 🛠️ Technical Stack & Adaptation
 * **Database Engine:** MySQL 8.0+
 * **Source Data:** CSV (ERP & CRM systems)
