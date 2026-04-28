@@ -17,8 +17,8 @@ This project follows the **Medallion Architecture** (Bronze, Silver, Gold layers
 
 *Figure 1: Architectural design created in draw.io*
 
-## 🏗️ Project layers
-![Data Warehouse Architecture](assets/project layers.jpg)
+  ## 🏗️ Project layers
+![Data Warehouse Architecture](assets/project_layers.jpg)
 
 *Figure 2: These are the layers in the project created in draw.io*
 
