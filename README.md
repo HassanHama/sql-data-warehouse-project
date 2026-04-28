@@ -18,6 +18,11 @@ This project follows the **Medallion Architecture** (Bronze, Silver, Gold layers
 * **SQL Dialect:** Ported from T-SQL (SQL Server) to MySQL.
 * **Key Challenge:** This project was originally designed for SQL Server. I have successfully translated the architecture, stored procedures, and schema logic into **MySQL**, demonstrating deep understanding of cross-platform SQL dialects.
 
+### 🛠️ Tools & Technologies
+* **Design:** draw.io (Used for architectural diagrams and data modeling)
+* **Planning:** Notion (Used for project tracking, task management, and documentation)
+* **Version Control:** Git & GitHub
+  
 ---
 
 ## 🎯 Project Objectives
