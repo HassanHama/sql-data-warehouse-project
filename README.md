@@ -1,43 +1,53 @@
-# Data Warehouse and Analytics Project
+# Data Warehouse & Analytics Project: End-to-End SQL Implementation
 
-Welcome to the **Data Warehouse and Analytics Project** repository!
-This project demonstrates a comprehensive data warehouse and analytics  solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project and highlights industry best practices in data engineering and analytics.
+Welcome to the **Data Warehouse and Analytics Project** repository. This project demonstrates a comprehensive, end-to-end data engineering and analytics solution—from architectural design and ETL to generating actionable business insights. 
 
----
-
-## Project Requirements
-
-### Building the Data Warehouse (Data Engineering)
-
-### Objectives
-Develomp a modern data warehouse using MySQL to consolidate sales data, enabling analytical reporting and informed decision-making. 
-
-### Specification
-- **Data Source**: Import data from two source systems (ERP and CRM) provided as CSV files.
-- **Data Quality**: Cleanse and resolve data quality issues prior to analysis.
-- **Integration**: Combine both sources into a single, user-friendly data model designed for - analytical queries.
-- **Scope**: Focus on the latest dataset only; historization of data is not required.
-- **Documentation**: Provide clear docomentation of the data model to support both business stakeholders and analytics teams.
+This repository serves as a portfolio piece highlighting industry best practices in data warehousing, including the **Medallion Architecture** and cross-dialect SQL implementation.
 
 ---
 
-### BI: Analytics and Reporting (Data Analytics)
+## 🏗️ High-Level Architecture
+This project follows the **Medallion Architecture** (Bronze, Silver, Gold layers) to ensure data quality and traceability:
+* **Bronze (Raw):** Landing zone for unprocessed data from ERP and CRM source systems.
+* **Silver (Cleaned):** Standardized, cleansed, and validated data.
+* **Gold (Curated):** Business-ready data modeled into Fact and Dimension tables for reporting.
 
-#### Objectives
-Develope SQL-based analytices to deliver detailed insights into:
-- **Customer Behavior**
-- **Product Performance**
-- **Sales Trends**
-
-These insights empower stakeholders with key business metrics, enabling strategic decision-making.
+### 🛠️ Technical Stack & Adaptation
+* **Database Engine:** MySQL 8.0+
+* **Source Data:** CSV (ERP & CRM systems)
+* **SQL Dialect:** Ported from T-SQL (SQL Server) to MySQL.
+* **Key Challenge:** This project was originally designed for SQL Server. I have successfully translated the architecture, stored procedures, and schema logic into **MySQL**, demonstrating deep understanding of cross-platform SQL dialects.
 
 ---
 
-## License
+## 🎯 Project Objectives
 
-This project is licensed under the [MIT Licens](LICENSE). You are free to use, modify, and share this with proper attribution.
+### 1. Data Engineering (The Warehouse)
+* **Consolidation:** Integrate disparate data from ERP and CRM sources.
+* **Quality Assurance:** Implement data cleansing and validation logic to resolve quality issues.
+* **Integration:** Build a user-friendly star schema for analytical queries.
+* **Efficiency:** Utilize Stored Procedures to automate the `Truncate & Insert` load method.
 
-## About Me
+### 2. Data Analytics (Business Intelligence)
+Develop SQL-based analytics to deliver insights into:
+* **Customer Behavior:** Segmenting and identifying key customer patterns.
+* **Product Performance:** Analyzing sales volume and revenue by category.
+* **Sales Trends:** Tracking growth and seasonal variations.
 
-Hi there! I'm **Mohammed Alhassan**. I'm a data professional and a classroom teacher, with an ambition to become a full time data engineer.
+---
 
+## 📈 Project Roadmap & Progress
+- [x] Environment Setup (MySQL Medallion Databases)
+- [x] Database Schema Translation (T-SQL to MySQL)
+- [ ] Bronze Layer: Table Definition & Data Loading
+- [ ] Silver Layer: Data Cleansing & Transformation
+- [ ] Gold Layer: Dimensional Modeling (Facts/Dimensions)
+- [ ] Business Analytics & Reporting
+
+---
+
+## 📜 License
+This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this with proper attribution.
+
+## 👨‍💻 About the Author
+I'm **Mohammed Alhassan**, a data professional and educator with over 9 years of experience. I specialize in automation and AI integration, with a focus on building scalable data solutions. My goal is to transition into a full-time Data Engineering role where I can combine my pedagogical background with robust technical architecture.
