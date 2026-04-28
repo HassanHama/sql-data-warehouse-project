@@ -13,7 +13,7 @@ This project follows the **Medallion Architecture** (Bronze, Silver, Gold layers
 * **Gold (Curated):** Business-ready data modeled into Fact and Dimension tables for reporting.
 
   ## 🏗️ High-Level Architecture
-![Data Warehouse Architecture](assets/arch_drawing.jpg)
+![Data Warehouse Architecture](assets/arch_drawing.png)
 
 *Figure 1: Architectural design created in draw.io*
 
