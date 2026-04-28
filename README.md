@@ -17,6 +17,11 @@ This project follows the **Medallion Architecture** (Bronze, Silver, Gold layers
 
 *Figure 1: Architectural design created in draw.io*
 
+## 🏗️ Project layers
+![Data Warehouse Architecture](assets/project layers.jpg)
+
+*Figure 2: These are the layers in the project created in draw.io*
+
 ### 🛠️ Technical Stack & Adaptation
 * **Database Engine:** MySQL 8.0+
 * **Source Data:** CSV (ERP & CRM systems)
