@@ -54,10 +54,13 @@ Develop SQL-based analytics to deliver insights into:
 ## 📈 Project Roadmap & Progress
 - [x] Environment Setup (MySQL Medallion Databases)
 - [x] Database Schema Translation (T-SQL to MySQL)
-- [ ] Bronze Layer: Table Definition & Data Loading
+- [x] Bronze Layer: Table Definition & Data Loading
 - [ ] Silver Layer: Data Cleansing & Transformation
 - [ ] Gold Layer: Dimensional Modeling (Facts/Dimensions)
 - [ ] Business Analytics & Reporting
+
+## Notes:
+During development, I encountered MySQL Error 1314. I pivoted from using Stored Procedures to a modular script-based execution to maintain the ETL pipeline's integrity while respecting MySQL’s security constraints.
 
 ---
 
