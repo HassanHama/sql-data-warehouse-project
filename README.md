@@ -28,6 +28,19 @@ This project follows the **Medallion Architecture** (Bronze, Silver, Gold layers
 * **SQL Dialect:** Ported from T-SQL (SQL Server) to MySQL.
 * **Key Challenge:** This project was originally designed for SQL Server. I have successfully translated the architecture, stored procedures, and schema logic into **MySQL**, demonstrating deep understanding of cross-platform SQL dialects.
 
+  ## 🛠️ Setup & Prerequisites
+To run this project locally, you need:
+* **MySQL 8.0.40**
+* **Local Infile Enabled:** Due to security restrictions in MySQL 8.0+, you must enable `local_infile` to load the CSV datasets.
+
+### 🚀 Troubleshooting "Secure File Priv" Errors
+If you encounter **Error 3948** or **Error 1290** during the Bronze layer load, follow these steps:
+1. **Server-side:** Run `SET GLOBAL local_infile = 1;` in your SQL editor.
+2. **Client-side (MySQL Workbench):** 
+   - Edit your Connection -> Advanced -> Others.
+   - Add `OPT_LOCAL_INFILE=1`.
+3. **Relaunch:** You must close and reopen the connection for changes to take effect.
+
 ### 🛠️ Tools & Technologies
 * **Design:** draw.io (Used for architectural diagrams and data modeling)
 * **Planning:** Notion (Used for project tracking, task management, and documentation)
@@ -58,9 +71,6 @@ Develop SQL-based analytics to deliver insights into:
 - [ ] Silver Layer: Data Cleansing & Transformation
 - [ ] Gold Layer: Dimensional Modeling (Facts/Dimensions)
 - [ ] Business Analytics & Reporting
-
-## Notes:
-During development, I encountered MySQL Error 1314. I pivoted from using Stored Procedures to a modular script-based execution to maintain the ETL pipeline's integrity while respecting MySQL’s security constraints.
 
 ---
 
