@@ -17,9 +17,9 @@ Usage:
 SOURCE scripts/init_database.sql;
 
 -- 2. Build and Load the Bronze Layer
--- These will be created as we progress through the video.
--- SOURCE scripts/bronze/proc_load_bronze.sql;
--- SOURCE scripts/bronze/load_bronze.sql;
+-- This creates the tables (DDL) and then loads the data using LOAD DATA LOCAL INFILE.
+SOURCE scripts/bronze/ddl_bronze.sql;
+SOURCE scripts/bronze/load_bronze.sql;
 
 -- 3. Build and Load the Silver Layer
 -- SOURCE scripts/silver/proc_load_silver.sql;
