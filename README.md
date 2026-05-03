@@ -74,6 +74,33 @@ Develop SQL-based analytics to deliver insights into:
 
 ---
 
+🛠️ Data Quality Challenges Resolved
+During the transition from the Bronze to Silver layer, several critical data quality issues were identified and resolved to ensure the "Business Ready" data quality required for the Gold Layer.  
+
+1. CRM System: Financial & Temporal Integrity
+Zero & Invalid Dates: Several records in crm_sales_details contained legacy placeholder dates (e.g., 00000000) or malformed integers. These were standardized using STR_TO_DATE or set to NULL to prevent pipeline crashes.  
+
+Sales Math Reconciliation: Discrepancies were found where Total Sales did not equal Quantity × Price. A self-healing logic was implemented to recalculate sales totals using the absolute value of the price, ensuring revenue accuracy.  
+
+Division-by-Zero Protection: Derived price calculations were wrapped in NULLIF logic to handle records with zero quantity, preventing fatal ETL errors.  
+
+2. ERP System: Structural Standardization
+System Prefix Removal: The erp_cust_az12 table used a NAS- prefix for IDs that was not present in the CRM system. These prefixes were stripped to enable seamless data integration between systems.  
+
+Logical Date Validation: Birthdates were audited against CURRENT_DATE(). Future-dated records were identified and set to NULL to maintain the integrity of demographic analysis.  
+
+ID Normalization: In the erp_loc_a101 table, hyphens were removed from IDs (e.g., 12-345 to 12345) to create a unified primary key format across the warehouse.  
+
+3. Data Enrichment & Categorization
+Code-to-Text Mapping: Cryptic categorical codes (e.g., 'DE', 'F', 'M') were mapped to descriptive, user-friendly labels ('Germany', 'Female', 'Male'). This improves the experience for the target audience of Data Analysts and Business Users.  
+
+Whitespace Cleansing: All categorical string fields were processed with TRIM() to remove hidden leading/trailing spaces that often cause "false negatives" during SQL joins and filtering.  
+
+4. Metadata & Traceability
+Lineage Tracking: Every table in the Silver layer was enriched with source_system and file_location metadata. This satisfies the project's "Traceability and Debugging" requirement, allowing users to trace any record back to its raw source file.
+
+---
+
 ## 📜 License
 This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this with proper attribution.
 
