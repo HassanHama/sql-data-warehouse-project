@@ -74,7 +74,7 @@ Develop SQL-based analytics to deliver insights into:
 
 ---
 
-🛠️ Data Quality Challenges Resolved
+## 🛠️ Data Quality Challenges Resolved
 During the transition from the Bronze to Silver layer, several critical data quality issues were identified and resolved to ensure the "Business Ready" data quality required for the Gold Layer.  
 
 1. CRM System: Financial & Temporal Integrity
