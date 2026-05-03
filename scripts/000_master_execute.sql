@@ -22,8 +22,14 @@ SOURCE scripts/bronze/ddl_bronze.sql;
 SOURCE scripts/bronze/load_bronze.sql;
 
 -- 3. Build and Load the Silver Layer
--- SOURCE scripts/silver/proc_load_silver.sql;
--- CALL silver.load_silver();
+-- First, we build the "containers" (Tables)
+SOURCE scripts/silver/ddl_silver.sql; 
+
+-- Second, we define the "cleaning logic" (Stored Procedure)
+SOURCE scripts/silver/proc_load_silver.sql;
+
+-- Finally, we execute the logic to move data from Bronze to Silver
+CALL silver.load_silver();
 
 -- 4. Build and Load the Gold Layer
 -- SOURCE scripts/gold/proc_load_gold.sql;
