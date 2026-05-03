@@ -31,6 +31,10 @@ SOURCE scripts/silver/proc_load_silver.sql;
 -- Finally, we execute the logic to move data from Bronze to Silver
 CALL silver.load_silver();
 
+-- Execute Quality Audits from the separate tests folder
+SELECT '>> Running Silver Layer Data Quality Tests...' AS message;
+SOURCE tests/test_silver.sql;
+
 -- 4. Build and Load the Gold Layer
 -- SOURCE scripts/gold/proc_load_gold.sql;
 -- CALL gold.load_gold();
