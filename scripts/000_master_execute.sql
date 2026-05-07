@@ -33,8 +33,8 @@ CALL silver.load_silver();
 SELECT '>> Running Silver Layer Data Quality Tests...' AS message;
 SOURCE ../tests/test_silver.sql; 
 
--- 4. Build and Load the Gold Layer
--- SOURCE gold/proc_load_gold.sql;
--- CALL gold.load_gold();
+-- 4. Build the Gold Layer
+SELECT '>> Building Gold Layer Views...' AS message;
+SOURCE gold/ddl_gold.sql;
 
 SELECT 'Data Warehouse Build Completed Successfully!' AS status;
