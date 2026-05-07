@@ -100,7 +100,7 @@ During the transition from the Bronze to Silver layer, several critical data qua
 ---
 
 ## 🌟 Credits & Acknowledgments
-This project was inspired by the comprehensive Data Warehouse tutorial by **Ali El-Habbak** (Data with Ali). 
+This project was inspired by the comprehensive Data Warehouse tutorial by **Baraa Khatib Salkini** (Data with Baraa). 
 
 While the original tutorial utilized **SQL Server (T-SQL)**, I have adapted the entire codebase, architecture, and logic to **MySQL**. This conversion required significant technical adjustments to stored procedures, window functions, and data loading methods, showcasing my ability to work across different database ecosystems.
 
