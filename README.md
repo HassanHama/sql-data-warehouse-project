@@ -39,6 +39,7 @@ The **Gold Layer** is structured using a Star Schema design. This approach prior
 * **Database Engine:** MySQL 8.0+
 * **Source Data:** CSV (ERP & CRM systems)
 * **SQL Dialect:** Ported from T-SQL (SQL Server) to MySQL.
+* **Advanced SQL:** Window Functions (ROW_NUMBER), Common Table Expressions (CTEs), and Temporal Slicing.
 * **Key Challenge:** This project was originally designed for SQL Server. I have successfully translated the architecture, stored procedures, and schema logic into **MySQL**, demonstrating deep understanding of cross-platform SQL dialects and syntax variations.
 
 ### 🚀 Setup & Prerequisites
@@ -95,7 +96,21 @@ During the transition from the Bronze to Silver layer, several critical data qua
 - [x] Bronze Layer: Table Definition & Data Loading
 - [x] Silver Layer: Data Cleansing & Transformation
 - [x] Gold Layer: Dimensional Modeling (Facts/Dimensions)
-- [ ] Business Analytics & Reporting
+- [x] Business Analytics & Reporting
+
+---
+
+---
+
+## 📊 Exploratory Data Analysis (EDA) & Insights
+Following the construction of the Gold Layer, a comprehensive EDA was performed to audit data quality and extract business intelligence. 
+
+**Key findings include:**
+* **Revenue Drivers:** The 'Bikes' category dominates the business, accounting for **96% of total revenue**.
+* **Regional Intelligence:** Australia represents the highest revenue density, yielding **2x the revenue per customer** compared to the United States.
+* **Data Quality Audit:** Identified a **5% variance** in customer reporting due to SCD (Slowly Changing Dimension) Type 2 duplicates in the source ingestion.
+
+> 📂 **View the full analysis:** For the complete SQL scripts and detailed business report, visit the [EDA Folder](./eda/).
 
 ---
 
@@ -110,4 +125,4 @@ While the original tutorial utilized **SQL Server (T-SQL)**, I have adapted the 
 This project is licensed under the [MIT License](LICENSE). 
 
 ## 👨‍💻 About the Author
-I'm **Mohammed Alhassan**, a data professional and educator with over 9 years of experience. I specialize in automation and AI integration, with a focus on building scalable data solutions.
+I'm **Mohammed Alhassan**, a Data Scientist and Professional Educator based in Ghana. I specialize in bridging the gap between complex data engineering and actionable business strategy.
